@@ -1,4 +1,5 @@
 package core.mate.academy.model;
+
 import core.mate.academy.service.MachineService;
 import core.mate.academy.service.MachineServiceImpl;
 import java.util.ArrayList;
