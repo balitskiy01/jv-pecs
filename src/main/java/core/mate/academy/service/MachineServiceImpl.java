@@ -1,5 +1,4 @@
 package core.mate.academy.service;
-
 import core.mate.academy.model.Bulldozer;
 import core.mate.academy.model.Excavator;
 import core.mate.academy.model.Machine;
@@ -16,18 +15,16 @@ public class MachineServiceImpl<T extends Machine> implements MachineService<T> 
     public List<T> getAll(Class<? extends Machine> type) {
         if (type == Bulldozer.class) {
             BulldozerProducer bulldozerProducer = new BulldozerProducer();
-            List<T> bulldozer = (List<T>) bulldozerProducer.get();
-            return bulldozer;
-        }
-        if (type == Excavator.class) {
+            List<? extends Machine> machines = bulldozerProducer.get();
+            return new ArrayList<>((List<T>) machines);
+        } else if (type == Excavator.class) {
             ExcavatorProducer excavatorProducer = new ExcavatorProducer();
-            List<T> excavator = (List<T>) excavatorProducer.get();
-            return excavator;
-        }
-        if (type == Truck.class) {
+            List<? extends Machine> machines = excavatorProducer.get();
+            return new ArrayList<>((List<T>) machines);
+        } else if (type == Truck.class) {
             TruckProducer truckProducer = new TruckProducer();
-            List<T> truck = (List<T>) truckProducer.get();
-            return truck;
+            List<? extends Machine> machines = truckProducer.get();
+            return new ArrayList<>((List<T>) machines);
         }
         return new ArrayList<>();
     }

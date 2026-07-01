@@ -1,5 +1,4 @@
 package core.mate.academy.service;
-
 import core.mate.academy.model.Machine;
 import java.util.List;
 

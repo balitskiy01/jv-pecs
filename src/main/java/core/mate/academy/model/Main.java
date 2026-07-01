@@ -1,8 +1,4 @@
-package core.mate.academy;
-
-import core.mate.academy.model.Bulldozer;
-import core.mate.academy.model.Machine;
-import core.mate.academy.model.Truck;
+package core.mate.academy.model;
 import core.mate.academy.service.MachineService;
 import core.mate.academy.service.MachineServiceImpl;
 import java.util.ArrayList;
